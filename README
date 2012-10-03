@@ -1,0 +1,18 @@
+These are simple applications showing usage of different parts and
+capabilities of Renesas RL78 MCUs.
+
+For more information about RL78 family visit Renesas web site:
+http://www.renesas.eu/products/mpumcu/rl78/index.jsp
+
+These samples were tested on QB-R5F100SL-TB CPU board
+populated with R5F100SLAFB MCU, but must run on other RL78 parts
+without or with little changes.
+
+RL78-ELF-GCC toolchain can be downloaded from KPIT GNU Tools web site:
+http://www.kpitgnutools.com/
+
+Directory structure:
+common/   - common files for all applications
+00-led/   - LED example (read switch state and toggle LEDs)
+01-it/    - Interval timer example (clock configuration and interrupt usage)
+02-uart/  - UART0 example (transmit string every second)
