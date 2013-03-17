@@ -67,7 +67,8 @@ SECTIONS
     *(.csstart)
   } > ROM
 
-  /* For code that must be in the first 64k.  */
+  /* For code that must be in the first 64k, or could fill unused
+     space below .rodata.  */
   .lowtext : {
     *(.plt)
     *(.lowtext)
@@ -125,7 +126,7 @@ SECTIONS
     *(.stack)
   }
 
-  .rodata : {
+  .rodata (MAX(__romdatastart + __romdatacopysize, 0x2000)) : {
     . = ALIGN(2);
     *(.plt)
     *(.rodata C C_2 C_1 .rodata.* .gnu.linkonce.r.*)
