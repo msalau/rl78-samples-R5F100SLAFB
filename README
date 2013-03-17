@@ -10,6 +10,7 @@ without or with little changes.
 
 RL78-ELF-GCC toolchain can be downloaded from KPIT GNU Tools web site:
 http://www.kpitgnutools.com/
+Please note, some samples should be built with toolchain v13.01 or newer.
 
 Directory structure:
 common/   - common files for all applications
