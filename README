@@ -17,3 +17,6 @@ common/   - common files for all applications
 00-led/   - LED example (read switch state and toggle LEDs)
 01-it/    - Interval timer example (clock configuration and interrupt usage)
 02-uart/  - UART0 example (transmit string every second)
+
+Samples for RL78/G14 can be found here:
+https://github.com/msalov/rl78-samples-R5F104FEAFP
