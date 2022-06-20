@@ -1,0 +1,27 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container:
+      image: msalau/rl78-elf-gcc
+      volumes:
+        - ${{ github.workspace }}:/src
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build
+        run: make
+      - name: Save build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Binaries
+          path: |
+            **/*.elf
+            **/*.lst
+            **/*.map
+            **/*.mot
+          if-no-files-found: error

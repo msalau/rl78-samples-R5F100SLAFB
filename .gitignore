@@ -1,0 +1,11 @@
+*~
+*.elf
+*.map
+*.lst
+*.mot
+*.hex
+*.srec
+*.[ado]
+/GPATH
+/GRTAGS
+/GTAGS

@@ -8,9 +8,15 @@ These samples were tested on QB-R5F100SL-TB CPU board
 populated with R5F100SLAFB MCU, but must run on other RL78 parts
 without or with little changes.
 
-RL78-ELF-GCC toolchain can be downloaded from KPIT GNU Tools web site:
-http://www.kpitgnutools.com/
-Please note, some samples should be built with toolchain v13.01 or newer.
+The samples can be built using the rl78-elf-gcc toolchain.
+The easiest option is to use a ready-to-use docket image with the toolchain:
+https://hub.docker.com/r/msalau/rl78-elf-gcc
+
+E.g.:
+  docker run --rm -v "$(pwd):/src" msalau/rl78-elf-gcc:4.9.2.202002 make
+
+A pre-built toolchain can also be obtained from https://llvm-gcc-renesas.com/
+https://llvm-gcc-renesas.com/rl78/rl78-download-toolchains/
 
 Directory structure:
 common/   - common files for all applications
